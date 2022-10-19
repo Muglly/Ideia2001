@@ -13,6 +13,10 @@ body {
     display: flex;
 }
 
+.aviso {
+    display: none;
+}
+
 header {
     display: flex;
     width: 100%;
@@ -24,7 +28,116 @@ header {
     }
 }
 
+/* modo vertical */
 @media screen and (max-width:500px) {
+
+    header {
+        padding: 0 15px;
+        height: 64px;
+        align-items: center;
+    }
+
+    header>.container {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header>.container>img {
+        width: 26px;
+        height: 20px;
+    }
+
+    .idioma {
+        width: 120px;
+        height: 34px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+        background-color: #FFFFFF;
+    }
+
+
+    main {
+        width: 100%;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 128px);
+    }
+
+    main>.container {
+        flex-flow: column;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        max-height: 370px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .botoes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .botoes a {
+        text-decoration: none;
+        width: 100%;
+        max-width: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        border: 1px solid #FA9401;
+        border-radius: 30px;
+        padding: 15px 0;
+        margin-bottom: 10px;
+    }
+
+    .search {
+
+        border: none;
+        background-color: #FA9401;
+    }
+
+    .botoes a>img {
+        margin-right: 5px;
+    }
+
+    footer {
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .social img {
+        margin-right: 10px;
+    }
+
+}
+
+/* modo horizontal */
+@media screen and (max-height:500px) {
 
     /* HEADER */
     header {
@@ -33,13 +146,13 @@ header {
         align-items: center;
     }
 
-    header > .container {
+    header>.container {
         width: 100%;
         align-items: center;
         justify-content: space-between;
     }
 
-    header > .container > img {
+    header>.container>img {
         width: 26px;
         height: 20px;
     }
@@ -66,10 +179,110 @@ header {
         height: calc(100vh - 128px);
     }
 
-    main > .container {
+    main>.container {
         flex-flow: column;
         width: 100%;
-        max-width: 265px;
+        max-width: 600px;
+        height: 100%;
+        max-height: 370px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 100%;
+        max-width: 240px;
+    }
+
+    .botoes {
+        display: inline-block;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        align-items: center;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .botoes a {
+        text-decoration: none;
+        width: 100%;
+        max-width: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        border: 1px solid #FA9401;
+        border-radius: 30px;
+        padding: 15px 0;
+        margin: 10px;
+    }
+
+    .search {
+
+        border: none;
+        background-color: #FA9401;
+    }
+
+    .botoes a>img {
+        margin-right: 5px;
+    }
+
+    footer {
+        display: none !important;
+    }
+
+}
+
+/* mode tablet */
+@media screen and (max-width:1024px) {
+    header {
+        padding: 0 15px;
+        height: 64px;
+        align-items: center;
+    }
+
+    header>.container {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header>.container>img {
+        width: 26px;
+        height: 20px;
+    }
+
+    .idioma {
+        width: 120px;
+        height: 34px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 30px;
+        background-color: #FFFFFF;
+    }
+
+    main {
+        width: 100%;
+        padding: 0 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: calc(100vh - 128px);
+    }
+
+    main>.container {
+        flex-flow: column;
+        width: 100%;
+        max-width: 600px;
         height: 100%;
         max-height: 370px;
     }
@@ -87,13 +300,13 @@ header {
 
     .botoes {
         display: flex;
-        flex-direction: column;
+        flex-flow: column;
         align-items: center;
         justify-content: center;
         margin-top: 40px;
     }
 
-    .botoes a{
+    .botoes a {
         text-decoration: none;
         width: 100%;
         max-width: 240px;
@@ -104,19 +317,20 @@ header {
         font-size: 16px;
         line-height: 19px;
         color: #FFFFFF;
+        font-weight: 700;
         border: 1px solid #FA9401;
         border-radius: 30px;
         padding: 15px 0;
         margin-bottom: 10px;
-    } 
+    }
 
     .search {
-        
+
         border: none;
         background-color: #FA9401;
     }
 
-    .botoes a > img {
+    .botoes a>img {
         margin-right: 5px;
     }
 
@@ -130,5 +344,31 @@ header {
     .social img {
         margin-right: 10px;
     }
+}
 
+
+@media screen and (min-width:1025px) {
+
+    .aviso {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        color: #FFFFFF;
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    header {
+        display: none;
+    }
+
+    main {
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
 }
