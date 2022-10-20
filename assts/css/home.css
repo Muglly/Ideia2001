@@ -29,7 +29,7 @@ header {
 }
 
 /* modo vertical */
-@media screen and (max-width:500px) {
+/* @media screen and (max-width:500px) {
 
     header {
         padding: 0 15px;
@@ -134,7 +134,7 @@ header {
         margin-right: 10px;
     }
 
-}
+} */
 
 /* modo horizontal */
 @media screen and (max-height:500px) {
